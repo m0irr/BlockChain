@@ -1,0 +1,13 @@
+
+    <h1>Check if Hash Matches the Blockchain</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="hash">Enter Hash to Check:</label>
+        <input type="text" id="hash" name="hash" required>
+        <button type="submit">Check Hash</button>
+    </form>
+
+    {% if result %}
+        <p>{{ result }}</p>
+    {% endif %}
+
